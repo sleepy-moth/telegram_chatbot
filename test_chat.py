@@ -26,13 +26,6 @@ def start_message(message):
     def name_password(message: types.Message):
         DaTa.password = message.text
         bot.send_message(message.from_user.id,
-                             "Значит твой пароль {}?".format(
-        DaTa.password)) #Ввод пароля и перенос в переменную класса DaTa
-
-
-@bot.message_handler(commands=['help']) #
-def help_message(message):
-    bot.send_message(message.from_user.id, "I don't know what to wright here right now")
-
+                             "Значит твой пароль {}?".format(DaTa.password)) #Ввод пароля и перенос в переменную класса DaTa
 
 bot.polling(none_stop=True, interval=0)
